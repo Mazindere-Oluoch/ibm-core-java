@@ -23,19 +23,19 @@ public class SwitchCasePractise {
 
             switch (code){
                 case 227:
-                    System.out.println("SE");
+                    System.out.println("your course is SE");
                     break;
                 case 223:
-                    System.out.println("CS");
+                    System.out.println("your course is CS");
                     break;
                 case 225:
-                    System.out.println("CT");
+                    System.out.println("your course is CT");
                     break;
                 case 221:
-                    System.out.println("IT");
+                    System.out.println("your course is IT");
                     break;
                 default:
-                    System.out.println("error");
+                    System.out.println("error, course not found");
 
             }
 
