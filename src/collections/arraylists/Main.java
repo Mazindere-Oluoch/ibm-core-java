@@ -1,6 +1,7 @@
 package collections.arraylists;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /*
 * wrapper classes such as Integer provide a way to treat primitive data as objects which is necessary
@@ -24,6 +25,11 @@ public class Main {
         System.out.println(studentNames);
         System.out.println("size of the ArrayList: " + studentNames.size());
         System.out.println("at index 0: " + studentNames.get(0));
+
+        //using ListOf- unmodifiable collection- cant modify (add, remove etc)
+        List<Integer> numbers = List.of(1,2,3,4,5);
+        System.out.println("using unmodifiable list:");
+        numbers.forEach(n-> System.out.println(n));
 
 
 
