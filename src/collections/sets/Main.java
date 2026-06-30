@@ -41,6 +41,26 @@ public class Main {
         for (String names : uniqueNames) //Alice will be printed only once
             System.out.println(names);
 
+        //check for a user inserting a duplicate value
+        Set<String> emails = new HashSet<>();
+        String[] userEmails= {"maz@gmail.com ",
+                                "dennis@gmail.com",
+                                "maz@gmail.com",
+                                "njogos@gmail.com",
+                                "kIOKO@gmail.com",
+                                "kioko@gmail.com"};
+
+        for(String userEmail : userEmails){
+            userEmail = userEmail.trim().toLowerCase();  //normalize emails b4 adding to loop
+            if(!emails.add(userEmail)){
+                System.out.println("\nDuplicate email '" + userEmail + "' found!");
+            }
+        }
+
+        System.out.println("emails: " + emails);
+
+
+
         System.out.println("\nHash code for the entire set: " + uniqueNames.hashCode());
 
         System.out.println("\n hash code for each value:");
