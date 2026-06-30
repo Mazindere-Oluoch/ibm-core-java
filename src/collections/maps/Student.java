@@ -31,18 +31,21 @@ public class Student {
     private int id;
     private String name;
     private int marks;
+
     public Student(int id, String name, int marks) {
         this.id = id;
         this.name = name;
         this.marks = marks;
     }
-  public Student(){
-        this.id=-1;
-        this.name="not found";
-        this.marks=-1;
-  }
+
+    public Student() {
+        this.id = -1;
+        this.name = "not found";
+        this.marks = -1;
+    }
 
     public static void main(String[] args) {
+        //todo - computeIfAbsent, ifPresent
         Map<String, Student> students = new HashMap<>();
 
         students.put("Dennis", new Student(1, "Dennis Nderitu", 80));
@@ -70,6 +73,10 @@ public class Student {
             System.out.println(values);
         }
 
+//        entry set- combination of key n value
+        System.out.println("\n**printing entry set:**\n" + students.entrySet());
+
+
 //        remove
         students.remove("Scar");
         System.out.println("\nafter removing key Scar..\n" + students);
@@ -78,7 +85,7 @@ public class Student {
 //        Given a student’s name, print their mark.
         System.out.println("\nRecords for Dosh: " + students.get("Dosh"));
 
-//        to fetch a record that does not exist we can use the following
+//        to fetch a record that does not exist we can use the following (can also use Optional)
         System.out.println("\nRecords for a non existing student: " + students.getOrDefault("ken", new Student()));
 
         //adding an element
